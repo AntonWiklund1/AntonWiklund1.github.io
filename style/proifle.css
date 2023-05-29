@@ -1,292 +1,321 @@
+body{
+  background-color: var(--bg-color);
+}
+
 .container {
-    /* max-width: 75rem; */
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
+  /* max-width: 75rem; */
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Styles for a header element */
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Styles for the toggle button in the navbar */
+.header .navbar .toggle {
+  position: absolute;
+  width: 2rem;
+  height: 1.4rem;
+  top: 2rem;
+  right: 4rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the toggle button icon */
+.header .navbar .toggle-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  width: 1.6rem;
+  height: 2px;
+  background: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the top part of the toggle button icon */
+.header .navbar .toggle-btn::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  width: 2rem;
+  height: 2px;
+  background: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the bottom part of the toggle button icon */
+.header .navbar .toggle-btn::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  width: 1.2rem;
+  height: 2px;
+  background: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the toggle button when it is open */
+.header .navbar .toggle-btn.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+
+/* Styles for the top part of the toggle button when it is open */
+.header .navbar .toggle-btn.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+
+/* Styles for the bottom part of the toggle button when it is open */
+.header .navbar .toggle-btn.open::after {
+  width: 2rem;
+  transform: rotate(-45deg) translate(3px, -6px);
+}
+
+/* Styles for the menu in the navbar */
+.header .navbar .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 1;
+  visibility: hidden;
+}
+
+/* Styles for the menu when it is open */
+.header .navbar .menu.open {
+  visibility: visible;
+}
+
+/* Styles for the list of items in the menu */
+.header .navbar .menu-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  list-style: none;
+  list-style-type: none;
+  padding-right: 1rem;
+  background: grey;
+}
+.header .navbar .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 1;
+  visibility: hidden;
+}
+.header .navbar .menu.open {
+  visibility: visible;
+}
+.header .navbar .menu-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  list-style: none;
+  list-style-type: none;
+  padding-right: 1rem;
+  background: #fff;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.header .navbar .menu-list.open {
+  transform: translateY(0);
+}
+.header .navbar .menu-item {
+  transform: translateX(100vw);
+  transition: all 0.3s ease-in-out;
+}
+.header .navbar .menu-item.open {
+  transform: translateX(0);
+}
+.header .navbar .menu-link {
+  display: inline-block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: inherit;
+  color: black;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.header .navbar .menu-link:hover {
+  color: #ff652f;
+}
+.header .navbar .menu .menu-list .menu-item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.header .navbar .menu .menu-list .menu-item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+.header .navbar .menu .menu-list .menu-item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+.header .navbar .menu .menu-list .menu-item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+.header .navbar {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: inherit;
+  color: black;
+  text-transform: uppercase;
+}
+.brand {
+  position: absolute;
+  left: 10vw;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: inherit;
+  color: white;
+  text-transform: uppercase;
+  padding-right: 9rem;
+}
+.responsiveMenu {
+  display: none;
+}
+@media only screen and (max-width: 950px) {
+  .responsiveMenu {
+    display: block;
   }
-  
-  /* Styles for a header element */
-  .header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    padding: 1rem;
-  }
-  
-  /* Styles for the toggle button in the navbar */
-  .header .navbar .toggle {
-    position: absolute;
-    width: 2rem;
-    height: 1.4rem;
-    top: 2rem;
-    right: 4rem;
-    z-index: 2;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Styles for the toggle button icon */
-  .header .navbar .toggle-btn {
-    position: absolute;
-    top: 0.5rem;
-    right: 0;
-    width: 1.6rem;
-    height: 2px;
-    background: black;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Styles for the top part of the toggle button icon */
-  .header .navbar .toggle-btn::before {
-    content: "";
-    position: absolute;
-    top: -0.5rem;
-    width: 2rem;
-    height: 2px;
-    background: black;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Styles for the bottom part of the toggle button icon */
-  .header .navbar .toggle-btn::after {
-    content: "";
-    position: absolute;
-    top: 0.5rem;
-    width: 1.2rem;
-    height: 2px;
-    background: black;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Styles for the toggle button when it is open */
-  .header .navbar .toggle-btn.open {
-    transform: rotate(720deg);
-    background: transparent;
-  }
-  
-  /* Styles for the top part of the toggle button when it is open */
-  .header .navbar .toggle-btn.open::before {
-    transform: rotate(45deg) translate(5px, 8px);
-  }
-  
-  /* Styles for the bottom part of the toggle button when it is open */
-  .header .navbar .toggle-btn.open::after {
-    width: 2rem;
-    transform: rotate(-45deg) translate(3px, -6px);
-  }
-  
-  /* Styles for the menu in the navbar */
-  .header .navbar .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    opacity: 1;
-    visibility: hidden;
-  }
-  
-  /* Styles for the menu when it is open */
-  .header .navbar .menu.open {
-    visibility: visible;
-  }
-  
-  /* Styles for the list of items in the menu */
-  .header .navbar .menu-list {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    list-style: none;
-    list-style-type: none;
-    padding-right: 1rem;
-    background: grey;
-  }
-  .header .navbar .menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      opacity: 1;
-      visibility: hidden;
-  }
-  .header .navbar .menu.open {
-      visibility: visible;
-  }
-  .header .navbar .menu-list {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      list-style: none;
-      list-style-type: none;
-      padding-right: 1rem;
-      background: #fff;
-      transform: translateY(-100%);
-      transition: all 0.3s ease-in-out;
-  }
-  .header .navbar .menu-list.open {
-      transform: translateY(0);
-  }
-  .header .navbar .menu-item {
-      transform: translateX(100vw);
-      transition: all 0.3s ease-in-out;
-  }
-  .header .navbar .menu-item.open {
-      transform: translateX(0);
-  }
-  .header .navbar .menu-link {
-      display: inline-block;
-      padding: 1rem 0;
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: inherit;
-      color: black;
-      text-transform: uppercase;
-      transition: all 0.3s ease-in-out;
-  }
-  .header .navbar .menu-link:hover {
-      color: #ff652f;
-  }
-  .header .navbar .menu .menu-list .menu-item:nth-child(1) {
-      transition-delay: 0.25s;
-  }
-  .header .navbar .menu .menu-list .menu-item:nth-child(2) {
-      transition-delay: 0.35s;
-  }
-  .header .navbar .menu .menu-list .menu-item:nth-child(3) {
-      transition-delay: 0.45s;
-  }
-  .header .navbar .menu .menu-list .menu-item:nth-child(4) {
-      transition-delay: 0.55s;
-  }
-  .header .navbar {
-      font-family: inherit;
-      font-size: 1.5rem;
-      font-weight: 500;
-      line-height: inherit;
-      color: black;
-      text-transform: uppercase;
-  }
-  .brand{
-    position: absolute;
-    left: 10vw;
-    font-family: inherit;
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: inherit;
-    color: black;
-    text-transform: uppercase;
-    padding-right: 9rem;
-  }
-  .responsiveMenu{
+  .menuBig {
     display: none;
   }
-  @media only screen and (max-width: 950px) {
-    .responsiveMenu{
-      display: block;
-    }
-    .menuBig{
-      display: none;
-    }
-  }
+}
+
+/* The big non hambergur menu */
+.menuBig {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  padding-right: 5vw;
+  filter: invert(100%);
+}
+
+.menuBig li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menuBig li:last-child {
+  margin-right: 0;
+}
+.menuBig li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.menuBig li a:hover {
+  background-color: #f5f5f5;
+}
+.menuBig li.active a {
+  background-color: #333;
+  color: #fff;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+.colorTheme {
+  transform: scale(0.6) translateY(-10px);
+}
+.mainContainer{
+  color: white;
+  display: flex;
+  border: 1px solid red;
+  width: 80%;
+  margin: auto;
+  gap: 1rem;
+  position: relative;
+  top: 5rem;
   
-  /* The big non hambergur menu */
-  .menuBig {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-    padding-right: 5vw;
-    filter: invert(100%);
-  }
-  
-  .menuBig li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .menuBig li:last-child {
-    margin-right: 0;
-  }
-  .menuBig li a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-  }
-  
-  .menuBig li a:hover {
-    background-color: #f5f5f5;
-  }
-  .menuBig li.active a {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  /* The switch - the box around the slider */
-  .switch {
-    display: block;
-    --width-of-switch: 3.5em;
-    --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
-    --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
-    --slider-offset: 0.3em;
-    position: relative;
-    width: var(--width-of-switch);
-    height: var(--height-of-switch);
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f4f4f5;
-    transition: .4s;
-    border-radius: 30px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: var(--size-of-icon,1.4em);
-    width: var(--size-of-icon,1.4em);
-    border-radius: 20px;
-    left: var(--slider-offset,0.3em);
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-    ;
-   transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #303136;
-  }
-  
-  input:checked + .slider:before {
-    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-    background: #303136;
-    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-  }
-  .colorTheme{ 
-    transform: scale(0.6) translateY(-10px);
-  }
-  
+}
+.proifleBlock{
+  border: 1px solid red;
+  background-color: var(--third-color);
+  flex-grow: 2;
+  padding: 1rem;
+  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 1);
+  border-radius: 12px;
+}
+.auditsBlock{
+  border: 1px solid red;
+  background-color: var(--third-color);
+  flex-grow: 2;
+  padding: 1rem;
+  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 1);
+  border-radius: 12px;
+}

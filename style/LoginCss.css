@@ -1,5 +1,6 @@
 body {
-  background-color: var(--first-color);
+  background-color: var(--bg-color);
+  color: white;
 }
 .loginWrapper {
   position: absolute;
