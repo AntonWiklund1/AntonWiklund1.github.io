@@ -1,7 +1,4 @@
-body {
-  background-color: var(--bg-color);
-  color: white;
-}
+
 .loginWrapper {
   position: absolute;
   display: flex;

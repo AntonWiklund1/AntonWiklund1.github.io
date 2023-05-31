@@ -1,4 +1,4 @@
-body{
+body {
   background-color: var(--bg-color);
 }
 
@@ -107,6 +107,7 @@ body{
   padding-right: 1rem;
   background: grey;
 }
+
 .header .navbar .menu {
   position: fixed;
   top: 0;
@@ -115,9 +116,11 @@ body{
   opacity: 1;
   visibility: hidden;
 }
+
 .header .navbar .menu.open {
   visibility: visible;
 }
+
 .header .navbar .menu-list {
   display: flex;
   flex-flow: column wrap;
@@ -132,16 +135,20 @@ body{
   transform: translateY(-100%);
   transition: all 0.3s ease-in-out;
 }
+
 .header .navbar .menu-list.open {
   transform: translateY(0);
 }
+
 .header .navbar .menu-item {
   transform: translateX(100vw);
   transition: all 0.3s ease-in-out;
 }
+
 .header .navbar .menu-item.open {
   transform: translateX(0);
 }
+
 .header .navbar .menu-link {
   display: inline-block;
   padding: 1rem 0;
@@ -152,21 +159,27 @@ body{
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
+
 .header .navbar .menu-link:hover {
   color: #ff652f;
 }
+
 .header .navbar .menu .menu-list .menu-item:nth-child(1) {
   transition-delay: 0.25s;
 }
+
 .header .navbar .menu .menu-list .menu-item:nth-child(2) {
   transition-delay: 0.35s;
 }
+
 .header .navbar .menu .menu-list .menu-item:nth-child(3) {
   transition-delay: 0.45s;
 }
+
 .header .navbar .menu .menu-list .menu-item:nth-child(4) {
   transition-delay: 0.55s;
 }
+
 .header .navbar {
   font-family: inherit;
   font-size: 1.5rem;
@@ -175,6 +188,7 @@ body{
   color: black;
   text-transform: uppercase;
 }
+
 .brand {
   position: absolute;
   left: 10vw;
@@ -186,13 +200,16 @@ body{
   text-transform: uppercase;
   padding-right: 9rem;
 }
+
 .responsiveMenu {
   display: none;
 }
+
 @media only screen and (max-width: 950px) {
   .responsiveMenu {
     display: block;
   }
+
   .menuBig {
     display: none;
   }
@@ -216,6 +233,7 @@ body{
 .menuBig li:last-child {
   margin-right: 0;
 }
+
 .menuBig li a {
   display: block;
   padding: 10px;
@@ -227,6 +245,7 @@ body{
 .menuBig li a:hover {
   background-color: #f5f5f5;
 }
+
 .menuBig li.active a {
   background-color: #333;
   color: #fff;
@@ -279,43 +298,67 @@ body{
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #303136;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
   background: #303136;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
+
 .colorTheme {
   transform: scale(0.6) translateY(-10px);
 }
-.mainContainer{
+
+.mainContainer {
   color: white;
   display: flex;
-  border: 1px solid red;
-  width: 80%;
+  width: 80vw;
   margin: auto;
   gap: 1rem;
   position: relative;
   top: 5rem;
+  flex-wrap: wrap;
+
   
 }
-.proifleBlock{
-  border: 1px solid red;
+.mainContainer div {
   background-color: var(--third-color);
-  flex-grow: 2;
-  padding: 1rem;
   box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 1);
+  padding: 1rem;
   border-radius: 12px;
+  height: 15rem;
+  font-size: 1.3rem;
 }
-.auditsBlock{
-  border: 1px solid red;
-  background-color: var(--third-color);
+
+.proifleBlock {
+  min-width: 15rem;
+  flex-basis: 47%;
   flex-grow: 2;
-  padding: 1rem;
-  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 1);
-  border-radius: 12px;
+}
+
+.auditsBlock {
+  flex-basis: 47%;
+  min-width: 15rem;
+  flex-grow: 2;
+}
+
+.xpBlock {
+
+  flex-basis: 21.75%;
+  flex-grow: 1;
+}
+
+.auditBlock {
+  flex-basis: 21.75%;
+  flex-grow: 1;
+}
+
+.statsBlock {
+  flex-basis: 47%;
+  flex-grow: 1;
+
 }
