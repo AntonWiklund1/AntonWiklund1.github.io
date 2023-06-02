@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/BasicCss.css">
-    <link rel="stylesheet" href="style/proifle.css">
-    <link rel="stylesheet" href="style/nav.css">
-    <title>GraphQL</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/BasicCss.css">
+  <link rel="stylesheet" href="style/proifle.css">
+  <link rel="stylesheet" href="style/nav.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <title>GraphQL</title>
 </head>
+
 <body>
-    <header class="header">
-        <nav class="navbar">
-          <div class="container">
-            <div class="brand">
-              <h1>GraphQL</h1>
-            </div>
-            <ul class="menuBig">
-              <li><a href="index.html">Log out</a></li>
-              <li><a href="#">About</a></li>
-              <li class="colorTheme">
-                <label class="switch">
-                  <input type="checkbox" class="themeSwitch" checked="checked"/>
-                  <span class="slider"></span>
-                </label>
-              </li>
-            </ul>
+  <nav>
+    <div class="nav__container">
+      <span class="material-symbols-rounded userIcon">
+        person
+        </span>
+        <h1 class="userNameNav">AntonW</h1>
+
+
+      <a href="#" class="nav__item active">
+        <div class="nav__item-icon">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <div class="nav__item-name">Home</div>
+      </a>
+      <a href="#" class="nav__item">
+        <div class="nav__item-icon">
+          <ion-icon name="people-outline"></ion-icon>
+        </div>
+        <div class="nav__item-name">Profile</div>
+      </a>
+      <a href="#" class="nav__item">
+        <div class="nav__item-icon">
+          <ion-icon name="bar-chart-outline"></ion-icon>
+        </div>
+        <div class="nav__item-name">XP</div>
+      </a>
+      <a href="#" class="nav__item">
+        <div class="nav__item-icon">
+          <ion-icon name="checkbox-outline"></ion-icon>
+        </div>
+        <div class="nav__item-name">Audits</div>
+      </a>
+      <a href="#" class="nav__item">
+        <div class="nav__item-icon">
+          <span class="material-symbols-rounded skillIcon">
+            cognition
+            </span>
+        </div>
+        <div class="nav__item-name">Skills</div>
+      </a>
+    </div>
+  </nav>
+  <div class="mainContainer">
+    <h1>hej</h1>
+  </div>
   
-            <!-- phone menu -->
-            <div class="responsiveMenu">
-              <div class="toggle">
-                <span class="toggle-btn"></span>
-              </div>
-              <div class="menu">
-                <ul class="menu-list">
-                  <li class="menu-item">
-                    <a href="#" class="menu-link">Log out</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#" class="menu-link">About</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-      </header>
-      <div class="mainContainer">
-        <div class="proifleBlock">
-          Anton Wiklund
-        </div> 
-        <div class="auditsBlock">
-          <h2>Audits</h2>
-          <p>Anton</p>
-          <p>Messi</p>
-        </div>
-        <div class="xpBlock">
-          <h2>XP</h2>
-          <p>137,000</p>
-        </div>
-        <div class="auditBlock">
-          <h2>Audit</h2>
-          <p>None</p>
-        </div>
-        <div class="statsBlock">
-          <h1>Stats</h1>
-        </div>
-        <div class="gradeBlock">
-          <h1>Grade</h1>
-          <p>Good</p>
-        </div>
-      </div>
-    </nav>
-      <script src="js.js"></script>
+  
+  <script src="js.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
