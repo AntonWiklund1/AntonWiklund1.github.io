@@ -106,3 +106,25 @@ reloadDiv.addEventListener('click', function() {
   // Reload the page
   location.reload();
 });
+// Select all elements with the class name "nav__item"
+const navItems = document.querySelectorAll('.nav__item');
+
+// Function to handle the click event on nav__item elements
+function hideHrTags(event) {
+  const hrTags = document.querySelectorAll('hr');
+
+  // Check if the clicked element has both "nav__item" and "logOutDiv" classes
+  const isLogOutDiv = event.currentTarget.classList.contains('nav__item') && event.currentTarget.classList.contains('logOutDiv');
+
+  // Loop through each <hr> tag and hide it, except when clicking on the logOutDiv
+  hrTags.forEach((hr) => {
+    if (!isLogOutDiv) {
+      hr.style.display = 'none';
+    }
+  });
+}
+
+// Add click event listener to each nav__item element
+navItems.forEach((navItem) => {
+  navItem.addEventListener('click', hideHrTags);
+});

@@ -161,7 +161,6 @@ body {
 .xpShow,
 .profileShow,
 .auditShow,
-.auditShow2,
 .attemptsShow {
   position: relative;
   top: 40vh;
@@ -174,7 +173,11 @@ body {
 .attemptsShow {
   transform: scale(1.5);
 }
-
+.auditShow2{
+  position: relative;
+  top: 25vh;
+  left: 10vw;
+}
 /* .logOutdiv {
   position: absolute;
   bottom: 5rem;
