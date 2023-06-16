@@ -1,4 +1,12 @@
 
+:root {
+  --first-color: #f0f0f0;
+  --secondary-color: #114b5f;
+  --third-color: #1c2b3a;
+  --fouth-color: #f45b69;
+  --fith-color: #6b2737;
+  --bg-color: #121212;
+}
 .loginWrapper {
   position: absolute;
   display: flex;
@@ -6,6 +14,8 @@
   width: 100%;
   height: 100vh;
   flex-wrap: wrap;
+  top: 0;
+  left: 0;
 }
 .left {
   flex-grow: 1;

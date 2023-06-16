@@ -5,12 +5,22 @@
     text-decoration: none;
     font-family: "Varela Round", sans-serif;
   }
-  
+  :root {
+    --first-color: #f0f0f0;
+    --secondary-color: #114b5f;
+    --third-color: #1c2b3a;
+    --fouth-color: #f45b69;
+    --fith-color: #6b2737;
+    --bg-color: #121212;
+  }
+  html {
+    font-family: 'Ropa Sans', sans-serif;
+  }
   nav {
     display: flex;
-    position: absolute;
+    position: fixed;
     width: 300px;
-    height: 100vh;
+    height: 100%;
     background-color: var(--third-color);
   
     overflow-x: hidden;
@@ -125,4 +135,8 @@
   }
   .skillIcon{
     color: #fff;
+  }
+  .logOutDiv{
+    position: relative;
+    top: 25%;
   }

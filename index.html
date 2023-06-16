@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GraphQL</title>
-    <link rel="stylesheet" href="style/LoginCss.css"/>
-    <link rel="stylesheet" href="style/BasicCss.css"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel=stylesheet href="./styles/index.css">
+    <link rel=stylesheet href="./styles/LoginCss.css">
+    <link rel=stylesheet href="./styles/LoginCss.css">
+</head>
+<body>
+  <div class="loginWrapper">
+    <div class="left">
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap"
-    />
-  </head> 
-  <body>
-    <div class="loginWrapper">
-      <div class="left">
-
-      </div>
-      <div class="right">
-        <div class="logInContainer">
-          <div class="LoginDesktopTitle">
-            <h2>Sign into your Account</h2>
-            <h6>Display your Grit:lab stats</h6>
-          </div>
-          
-          <form>
-            <div class="form-group">
-              <label for="username">Username:</label>
-              <input type="text" id="username" name="username" class="input" required />
-            </div>
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" class="input" required />
-            </div>
-            <div class="form-group form-button">
-              <div class="button-borders">
-                <button class="primary-button" type="submit"> Login </button>
-              </div>
-            </div>
-          </form>
+    </div>
+    <div class="right">
+      <div class="logInContainer">
+        <div class="LoginDesktopTitle">
+          <h2>Sign into your Account</h2>
+          <h6>Display your Grit:lab stats</h6>
         </div>
+        
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="input" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="input" required />
+          </div>
+          <div class="form-group form-button">
+            <div class="button-borders">
+              <button class="primary-button" type="submit"> Login </button>
+              
+            </div>
+            
+          </div>
+          <br>
+          <div id="error-message"></div>
+        </form>
       </div>
     </div>
-    <div class="phoneTitle">
-      <div class="phonTitleContent">
-        <!-- <img src="https://images.unsplash.com/photo-1603539947678-cd3954ed515d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" class="phoneTitleImage"> -->
-        <h2>Sign into your Account</h2>
-        <h6>Display your Grit:lab stats</h6>
-      </div>
+    
+  </div>
+  <div class="phoneTitle">
+    <div class="phonTitleContent">
+      <h2>Sign into your Account</h2>
+      <h6>Display your Grit:lab stats</h6>
     </div>
-    <div class="test"></div>
-  </body>
+  </div>
+
+
+
+
+    <!-- <div class="container">
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+
+              <button type="submit">Login</button>
+            </form>
+            <div id="error-message"></div>
+          </div>
+
+
+    </div> -->
+    <script src="./scripts/index.js" defer></script>
+
+</body>
 </html>

@@ -3,15 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/BasicCss.css">
-  <link rel="stylesheet" href="style/proifle.css">
-  <link rel="stylesheet" href="style/nav.css">
-  <link rel="stylesheet" href="style/chart.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-  <title>GraphQL</title>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="./styles/profile.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -19,95 +15,135 @@
     <div class="nav__container">
       <span class="material-symbols-rounded userIcon">
         person
-        </span>
-        <h1 class="userNameNav">AntonW</h1>
+      </span>
+      <h1 class="userNameNav nameContainer"></h1>
 
 
-      <a href="#" class="nav__item active">
+      <a href="#" class="nav__item active" id="reloadDiv">
         <div class="nav__item-icon">
           <ion-icon name="home-outline"></ion-icon>
         </div>
         <div class="nav__item-name">Home</div>
       </a>
-      <a href="#" class="nav__item">
+      <a href="#" class="nav__item profileClick" id="profileClick">
         <div class="nav__item-icon">
           <ion-icon name="people-outline"></ion-icon>
         </div>
         <div class="nav__item-name">Profile</div>
       </a>
-      <a href="#" class="nav__item">
+
+      <a href="#" class="nav__item xpClick" id="xpClick">
         <div class="nav__item-icon">
-          <ion-icon name="bar-chart-outline"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
         </div>
+        
         <div class="nav__item-name">XP</div>
       </a>
-      <a href="#" class="nav__item">
-        <div class="nav__item-icon">
+
+      <a href="#" class="nav__item auditClick" id="auditClick">
+        <div class="nav__item-icon " >
           <ion-icon name="checkbox-outline"></ion-icon>
         </div>
         <div class="nav__item-name">Audits</div>
       </a>
-      <a href="#" class="nav__item">
+      <a href="#" class="nav__item attemptsClick" id="attemptsClick">
         <div class="nav__item-icon">
-          <span class="material-symbols-rounded skillIcon">
-            cognition
-            </span>
+          <div class="nav__item-icon">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+          </div>
         </div>
-        <div class="nav__item-name">Skills</div>
+        <div class="nav__item-name">Attempts</div>
+      </a>
+      <a href="#" class="nav__item logOutDiv" id="logOutBtn">
+        <div class="nav__item-icon">
+          <div class="nav__item-icon">
+            <ion-icon name="log-out-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="nav__item-name">Log Out</div>
       </a>
     </div>
   </nav>
-  <div class="mainContainer">
-    <h1>hej</h1>
-    <svg width="800px" height="50%" class="svg1" id="graph">
-      <!-- X and Y axes -->
-      <line x1="50" y1="250" x2="450" y2="250" stroke="black" />
-      <line x1="50" y1="50" x2="50" y2="250" stroke="black" />
-    
-      <!-- Data points (cx=height cy=width r=radius)-->
-      <circle cx="100" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="200" dur="2s" begin="0s" fill="freeze" />
-      </circle> 
-      <circle cx="150" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="150" dur="2s" begin="0s" fill="freeze" />
-      </circle>
-      <circle cx="200" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="100" dur="2s" begin="0s" fill="freeze" />
-      </circle>
-      <circle cx="250" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="200" dur="2s" begin="0s" fill="freeze" />
-      </circle>
-      <circle cx="300" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="150" dur="2s" begin="0s" fill="freeze" />
-      </circle>
-      <circle cx="350" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="50" dur="2s" begin="0s" fill="freeze" />
-      </circle>
-      <circle cx="400" cy="250" r="3" fill="red">
-        <animate attributeType="XML" attributeName="opacity" from="0" to="1" dur="2s" begin="0s" fill="freeze" />
-        <animate attributeType="XML" attributeName="cy" from="250" to="50" dur="2s" begin="0s" fill="freeze" />
-      </circle>
-    
-      <!-- Connecting lines -->
-      <polyline fill="none" stroke="blue">
-        <animate attributeType="XML" attributeName="points" dur="2s" begin="0s" fill="freeze" from="100,250 150,250 200,250 250,250 300,250 350,250 400,250" to="100,200 150,150 200,100 250,200 300,150 350,50 400,50" />
-      </polyline>
-    </svg>
-    
-    
-    
+  <div class="logOutdiv">
+   
   </div>
-  
-  
-  <script src="js.js"></script>
+
+  <div id="logOutModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Are you sure you want to log out?</p>
+      <button id="logOutConfirm">Log Out</button>
+    </div>
+
+  </div>
+  <div class="mainContainer">
+    <div class="main">
+      <div class="xpHide profileShowDiv auditHide attemptsHide">
+        <div class="user-info">
+          <h3>Username</h3>
+          <span id="loginName"></span>
+        </div>
+      </div>
+      <hr>
+      <div class="xpShowDiv profileHide auditHide attemptsHide">
+        <h3>School Curriculum XP</h3>
+        <div class="xpContainer"></div>
+      </div>
+
+      <div class="xpHide profileHide auditShowDiv2 attemptsHide">
+        <hr>
+        <h3>Done and received</h3>
+        <div class="auditContainer">
+          <span id="auditDone"></span>
+          <br>
+          <span id="auditReceived"></span>
+        </div>
+      </div>
+
+    <div class="xpHide profileHide auditShowDiv attemptsHide">
+      <hr>
+      <h2>Audit Ratio</h2>
+      <div id="legend">
+        <div class="legend-item xpHide profileHide">
+          <span class="legend-color" style="background-color: #FF7043;"></span>
+          <span class="legend-label">Audits Done XP</span>
+        </div>
+        <div class="legend-item xpHide profileHide">
+          <span class="legend-color" style="background-color: #1FDA9A;"></span>
+          <span class="legend-label">Audits Received XP</span>
+        </div>
+      </div>
+      <div id="chart"></div>
+    </div>
+
+    <div id="mainTooltip" class="hidden">
+      <p><span id="value"></span></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="xpHide profileHide auditHide attemptsShowDiv">
+      <h2>Attempts for completed Piscine JS exercises</h2>
+      <hr>
+      <div id="barChartOuterContainer">
+        <div id="barChartContainer">
+          <svg id="barChart" width="9000" height="400"></svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v4.min.js" defer></script>
+  <script src="./scripts/fetch.js" defer></script>
+  <script src="./scripts/graphMaker.js" defer></script>
+  <script src="./scripts/profile.js" defer></script>
+  <script src="./scripts/styleJs.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
