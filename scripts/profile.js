@@ -50,15 +50,5 @@ function logOutFunc() {
 logOutButton.addEventListener("click", () => {
   logOutFunc();
 });
-// --------------------------------------------------
-
-
-
-
-
-
-
-
-
 
 });
