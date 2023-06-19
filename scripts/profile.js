@@ -5,17 +5,10 @@ const token = localStorage.getItem("token");
 
 // console.log("Token:", token);
 
-
-
-
-
 fetchName(token, GRAPHQL_ENDPOINT);
 fetchXP(token, GRAPHQL_ENDPOINT);
 fetchAudit(token, GRAPHQL_ENDPOINT);
 fetchAttempts(token, GRAPHQL_ENDPOINT);
-
-
-
 
 // logout functions
 // --------------------------------------------------
