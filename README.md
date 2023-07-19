@@ -15,7 +15,7 @@ The GraphQL Profile Page project aims to present information from various querie
 This project leverages GraphQL to fetch and display data on a profile page. It utilizes GraphQL queries to retrieve specific information from a server and presents it in a visually appealing format. The profile page serves as a central hub for users to access relevant information related to their profile or account.
 
 ## Usage
-To use this project, simply open the `index.html` file in your preferred web browser. Alternatively, you can access the live version of the page by clicking [here](URLHERE).
+To use this project, simply open the `index.html` file in your preferred web browser. Alternatively, you can access the live version of the page by clicking [here](https://antonwiklund1.github.io/).
 
 ## Features
 - Display relevant profile information
